@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Refer by using Name attribute</title>
+        <script>
+            function bodyload(){
+                pic.src="images/car.avif";
+                Home.btnRegister.value="Register";
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <div> 
+            <img name="pic" width="600" height="400" border="1">
+        </div>
+        <div>
+            <form name="Home">
+                Name: <input type="text">
+                      <input type="button" name="btnRegister">
+            </form>
+        </div>
+    </body>
+</html>
+
+<!-- but if element is having disantant heirarcy then we have to refer both parent and child elemet, so that we can not access child element -->
