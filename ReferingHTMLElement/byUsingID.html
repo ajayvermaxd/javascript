@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Refer by using ID</title>
+        <script>
+            function bodyload(){
+               document.getElementById("pic").src="images/car.avif";
+                document.getElementById("btnRegister").value="Register";
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <div> 
+            <img id="pic" width="600" height="400" border="1">
+        </div>
+        <div>
+            <form>
+                Name: <input type="text" id="txtNamr">
+                      <input type="button" id="btnRegister">
+            </form>
+        </div>
+    </body>
+</html>
+
