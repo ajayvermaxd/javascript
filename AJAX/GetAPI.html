@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //Step 1: Ajax object 
+    //Step 2: opening the url
+    //Step 3: Send 
+    //step 4:
+    // script.js
+    console.log('API AJAX call')
+    const result = document.getElementById('result');
+    document.getElementById('ReqresData').addEventListener('click', function () {
+      // // GET request
+      var xhr = new XMLHttpRequest(); // create an object
+      xhr.open('GET', 'https://reqres.in/api/users?page=2'); //Open the port
+      xhr.send(); // send the request
+      xhr.onload = function () {
+        var data = JSON.parse(xhr.responseText);
+        console.log('API response', data)
+        result.innerHTML = data.data;
+      };
+
+    });
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
