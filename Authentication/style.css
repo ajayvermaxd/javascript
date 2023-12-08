@@ -1,0 +1,10 @@
+body{
+    border: 1px;
+    background-color: aqua;
+    align-items: center;
+    
+}
+button{
+    color: brown;
+    border-radius: 40%;
+}
