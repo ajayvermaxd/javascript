@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Confirm function
+        </title>
+        <script>
+            // JavaScript function to handle the delete button click
+            function DeleteClick(){
+                // Display a confirmation dialog and store the result in variable x
+                x = confirm("Delete the button");
+
+                // If the user clicks "OK" in the confirmation dialog, display "Record Deleted" in an alert; otherwise, display "Action Cancelled"
+                (x==true) ? alert("Record Deleted") : alert("Action Cancelled"); 
+            }
+
+        </script>
+    </head>
+    <body>
+        <div>
+            <!-- A form containing a button with the value "Delete"; the DeleteClick() function is triggered when the button is clicked -->
+            <form>
+                <input type="button" value="Delete" onclick="DeleteClick()">
+            </form>
+        </div>
+    </body>
+</html>
