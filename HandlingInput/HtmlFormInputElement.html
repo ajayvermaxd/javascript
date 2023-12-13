@@ -1,9 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script></script>
+    <!-- Style for bold dt elements -->
+    <style>
+        dt {
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        // Function to register product and display details
+        function Register() {
+            // Get input values from the form
+            var Id = document.getElementById("txtId").value;
+            var Name = document.getElementById("txtName").value;
+            var Price = document.getElementById("txtPrice").value;
+            var mfd = document.getElementById("txtMfd").value;
+
+            // Get radio button values
+            var yes = document.getElementById("optYes");
+            var no = document.getElementById("optNo");
+            var stock = (yes.checked) ? yes.value : (no.checked) ? no.value : "";
+
+            // Get selected city from the dropdown
+            var city = document.getElementById("Cities").value;
+
+            // Display the input values in the product details section
+            document.getElementById("lblId").innerText = Id;
+            document.getElementById("lblName").innerText = Name;
+            document.getElementById("lblPrice").innerText = Price;
+            document.getElementById("lblMFD").innerText = mfd;
+            document.getElementById("lblStock").innerText = stock;
+            document.getElementById("lblCity").innerText = city;
+        }
+    </script>
 </head>
+
 <body>
-    
+    <div>
+        <!-- Fieldset for product registration -->
+        <fieldset>
+            <legend>Register Product</legend>
+            <dl>
+                <!-- Input fields for product information -->
+                <dt>Product ID</dt>
+                <dd><input type="number" min="1" max="20" id="txtId"></dd>
+                <dt>Product Name</dt>
+                <dd><input type="text" id="txtName"></dd>
+                <dt>Product Price</dt>
+                <dd><input type="range" min="1000" max="40000" id="txtPrice"></dd>
+                <dt>Product Manufactures</dt>
+                <dd><input type="date" id="txtMfd"></dd>
+                <dt>Is In Stock</dt>
+                <dd>
+                    <input type="radio" name="stock" value="Available" id="optYes">Yes
+                    <input type="radio" name="stock" value="Out-Of-Stock" id="optNo">No
+                </dd>
+                <dt>Select the city</dt>
+                <dd>
+                    <select id="Cities">
+                        <option value="Delhi">Delhi</option>
+                        <option value="Hyd">Hyderabad</option>
+                        <option value="LKO">Lucknow</option>
+                        <option value="Mum">Mumbai</option>
+                    </select>
+                </dd>
+            </dl>
+            <br>
+            <!-- Button to trigger the Register function -->
+            <input type="button" value="Register" onclick="Register()">
+        </fieldset>
+        <br>
+        <!-- Fieldset to display product details -->
+        <fieldset id="showDetails">
+            <legend>Product Details</legend>
+            <!-- Table to organize and display product details -->
+            <table width="400" border="1">
+                <tr>
+                    <td>Product Id</td>
+                    <td id="lblId"></td>
+                </tr>
+                <tr>
+                    <td>Product Name</td>
+                    <td id="lblName"></td>
+                </tr>
+                <tr>
+                    <td>Product Price</td>
+                    <td id="lblPrice"></td>
+                </tr>
+                <tr>
+                    <td>Date of Manufacturing</td>
+                    <td id="lblMFD"></td>
+                </tr>
+                <tr>
+                    <td>Is in Stock</td>
+                    <td id="lblStock"></td>
+                </tr>
+                <tr>
+                    <td>Shipped to</td>
+                    <td id="lblCity"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
 </body>
+
 </html>
