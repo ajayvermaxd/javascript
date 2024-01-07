@@ -1,0 +1,17 @@
+Task 1: Create an empty webpage to show restaurant data read through using an XML file.
+
+Skill Mapping: HTML and CSS
+
+
+
+Task 2: Create an XML file in your project folder with the following format:-
+
+< restaurant name="yellow chilli" address="New Delhi" lat="47.608940" lng="-122.340141" type="sitdown"/>
+
+Use AJAX to load the file into your page.
+
+
+
+Task 3: Create a <ul>. For each <restaurant>, create a <li> with the name and address of the restaurant. Change the color of the text depending on the type of the restaurant (“sit down” or “bar”).
+
+Skill Mapping: AJAX, XML file.

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurants>
+    <restaurant>
+        <name>La-Italiana</name>
+        <location>Hyderabad</location>
+        <category>Italian</category>
+        <rating>4.0</rating>
+    </restaurant>
+    <restaurant>
+        <name>China Bowl</name>
+        <location>Delhi</location>
+        <category>Chinese</category>
+        <rating>4.1</rating>
+    </restaurant>
+    <restaurant>
+        <name>Desi Bites</name>
+        <location>Delhi</location>
+        <category>Indian</category>
+        <rating>4.5</rating>
+    </restaurant>
+    <restaurant>
+        <name>Thai Town</name>
+        <location>Mumbai</location>
+        <category>Thai Food</category>
+        <rating>3.9</rating>
+    </restaurant>
+
+</restaurants>
