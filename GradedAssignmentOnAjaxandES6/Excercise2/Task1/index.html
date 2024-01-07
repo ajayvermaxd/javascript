@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Population Lookup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Country Population Lookup</h1>
+
+  <label for="countryInput">Enter a country:</label>
+  <input type="text" id="countryInput" placeholder="Country name">
+  <button onclick="addCountry()">Add</button>
+
+  <ul id="countryList">
+    <!-- Country and population will be dynamically added here using JavaScript -->
+  </ul>
+
+  <script>
+    function addCountry() {
+      const countryInput = document.getElementById("countryInput");
+      const countryName = countryInput.value;
+
+      // Make a request to the Restcountries API
+      fetch(`https://restcountries.com/v2/name/${countryName}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.length > 0) {
+            const population = data[0].population;
+            displayCountry(countryName, population);
+          } else {
+            alert(`Population data not found for ${countryName}`);
+          }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+
+      // Clear the input field after making the request
+      countryInput.value = '';
+    }
+
+    function displayCountry(countryName, population) {
+      const countryList = document.getElementById("countryList");
+      const listItem = document.createElement("li");
+      listItem.innerHTML = `<strong>${countryName}</strong> - Population: ${population.toLocaleString()}`;
+      countryList.appendChild(listItem);
+    }
+  </script>
+  
+
+</body>
+</html>
