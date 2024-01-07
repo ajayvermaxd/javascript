@@ -1,0 +1,4 @@
+<!-- restaurants.xml -->
+<restaurants>
+  <restaurant name="yellow chilli" address="New Delhi" lat="28.6139" lng="77.2090" type="sitdown"/>
+</restaurants>
