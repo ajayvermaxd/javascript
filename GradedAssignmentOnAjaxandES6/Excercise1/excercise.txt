@@ -1,8 +1,7 @@
+EXERCISE 1:
 Task 1: Create an empty webpage to show restaurant data read through using an XML file.
 
 Skill Mapping: HTML and CSS
-
-
 
 Task 2: Create an XML file in your project folder with the following format:-
 
@@ -10,8 +9,22 @@ Task 2: Create an XML file in your project folder with the following format:-
 
 Use AJAX to load the file into your page.
 
-
-
 Task 3: Create a <ul>. For each <restaurant>, create a <li> with the name and address of the restaurant. Change the color of the text depending on the type of the restaurant (“sit down” or “bar”).
 
 Skill Mapping: AJAX, XML file.
+
+
+
+EXERCISE 2:
+
+Find an API that provides you with the population figure of a given country.
+
+Task 1: When the user has entered the name of a country and pressed add, your application should retrieve the population data from the API, and add the name of the country and its population figure to the list.
+
+Skill Mapping: AJAX fetch, HTML request and response cycle.
+
+
+
+Task 2: If the user enters something that is not recognized as a country by the API, it should not be added to the list, and an appropriate message is shown to the user. You can display this message by using a simple alert box.
+
+Skill Mapping: AJAX fetch, HTML request and response cycle.
