@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurants>
+    <restaurant name="Yellow Chilli" address="123 Spice Lane, New Delhi" type="sit down"/>
+    <restaurant name="Lal Street" address="Jubliee Hills, Hyd" type="bar"/>
+    
+    <!-- Additional restaurant entries can be added here -->
+</restaurants>
